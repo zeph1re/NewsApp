@@ -1,5 +1,9 @@
 package com.example.newsapplication.model
 
+import android.os.Parcelable
+import java.io.Serializable
+
+
 data class Article(
     val author: String,
     val content: String,
@@ -9,4 +13,4 @@ data class Article(
     val title: String,
     val url: String,
     val urlToImage: String
-)
+) : Serializable

@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.newsapplication'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.newsapplication"
@@ -48,6 +48,20 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+
+    // Image Render
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    //LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+
+    //    library ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+
+    // library untuk livedata
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+
+
 
 
 
