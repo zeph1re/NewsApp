@@ -1,16 +1,24 @@
 package com.example.newsapplication.ui.detail
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import com.bumptech.glide.Glide
 import com.example.newsapplication.R
 import com.example.newsapplication.model.Article
 import org.w3c.dom.Text
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Calendar
 
 
 class DetailScreen : Fragment() {
@@ -54,4 +62,5 @@ class DetailScreen : Fragment() {
         Glide.with(this).load(detail.urlToImage).into(newsImage)
 
     }
+
 }

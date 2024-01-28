@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newsapplication.R
@@ -30,6 +31,7 @@ class NewsAdapter(
         val description : TextView = itemView.findViewById(R.id.news_description)
         val publishedDate : TextView = itemView.findViewById(R.id.news_published_date)
         val imageNews: ImageView = itemView.findViewById(R.id.news_image)
+        val cardNews : CardView = itemView.findViewById(R.id.card_news)
     }
 
 
@@ -49,9 +51,9 @@ class NewsAdapter(
 
         Glide.with(holder.itemView.context).load(dataNews!![position].urlToImage).into(holder.imageNews)
 //
-//        holder.itemView.cardNews.setOnClickListener {
-//            onClick(dataNews[position])
-//        }
+        holder.cardNews.setOnClickListener {
+            onClick(dataNews!![position])
+        }
     }
 
     override fun getItemCount(): Int {
