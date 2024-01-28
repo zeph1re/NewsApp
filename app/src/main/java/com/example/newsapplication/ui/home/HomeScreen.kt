@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapplication.R
@@ -48,10 +49,9 @@ class HomeScreen : Fragment() {
     private fun initRv() {
         newsRecyclerView.layoutManager = LinearLayoutManager(context)
         newsAdapter = NewsAdapter {
-//            val clickedFilm = bundleOf("DATA_FILM" to it)
-//            val pindah = Intent(this, Detail::class.java)
-//            pindah.putExtras(clickedFilm)
-//            startActivity(pindah)
+            val clickedNews = bundleOf("DATA_NEWS" to it)
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeScreen_to_detailScreen, clickedNews)
+            Toast.makeText(requireContext(), "Clicked", Toast.LENGTH_SHORT).show()
         }
 
         newsRecyclerView.adapter = newsAdapter
