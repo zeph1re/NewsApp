@@ -53,6 +53,7 @@ class DetailScreen : Fragment() {
     private fun getDetail() {
         val detail = arguments?.getParcelable<Article>("DATA_NEWS")
 
+
         newsTitle.text = detail!!.title
         newsAuthor.text = detail.author
         newsDescription.text = detail.description

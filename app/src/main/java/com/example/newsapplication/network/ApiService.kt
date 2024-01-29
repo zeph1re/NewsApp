@@ -12,7 +12,14 @@ interface ApiService {
 
     @GET("everything")
     fun getAllNewsData (
-        @Query("q") query: String = "bitcoin",
+        @Query("q") query: String = "youtube",
+        @Query("apiKey") apiKey: String = Constant.apiKey
+    ) : Call<GetAllResponseNews>
+
+
+    @GET("top-headlines" )
+    fun getHeadlines (
+        @Query("sources") sources: String = "bbc-news",
         @Query("apiKey") apiKey: String = Constant.apiKey
     ) : Call<GetAllResponseNews>
 

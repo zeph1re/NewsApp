@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/detail_news_image"
         android:text="title"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp"
@@ -36,9 +37,9 @@
 
         <ImageView
             android:id="@+id/detail_author_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_account_circle_24"
 
             />
 
@@ -64,8 +65,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="this is description"
+        android:textSize="15sp"
         android:layout_below="@id/author_layout"
         android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp"/>
+        android:layout_marginHorizontal="16dp"
+        />
 
 </RelativeLayout>

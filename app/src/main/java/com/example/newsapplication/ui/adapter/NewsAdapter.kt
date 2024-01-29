@@ -22,9 +22,6 @@ class NewsAdapter(
         this.dataNews = article
     }
 
-
-
-
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.news_title)
         val author: TextView = itemView.findViewById(R.id.news_author)
